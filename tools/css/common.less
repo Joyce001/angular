@@ -1,0 +1,32 @@
+@charset "utf-8";
+body,p,h1,h2,div,span,ul,li,img{
+    padding: 0;
+    margin: 0;
+}
+body{
+     font:14px/1.5 Arial,"Microsoft YaHei"; 
+}
+a{
+    color: #000000;
+    text-decoration: none;
+    cursor: pointer;
+     &:hover,&:active,&:focus{
+         text-decoration:none;
+     }
+}
+//清除浮动
+.clearFloat{
+  &:after{
+      display: block;
+      clear: both;
+      content: "";
+  }  
+}
+//--圆角 
+.rounded-corners (@radius: 5px) {
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+    -ms-border-radius: @radius;
+    -o-border-radius: @radius;
+    border-radius: @radius;
+}

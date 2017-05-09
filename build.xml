@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="ZIP:workplace" default="copy_oaweb_sit" basedir=".">
+<property name="Copydir" value="config"/>
+<property name="TOdir" value="tools/js"/>
+<target name="sit" description="sit config">
+<copy tofile="${TOdir}/config.js" overwrite="true">
+     <fileset dir="${Copydir}/sit" includes="config.js" />
+</copy> 
+</target> 
+<target name="copy_oaweb_sit" depends="sit">
+   <copy todir="/home/resource/oaweb">
+			 <fileset dir="."/>
+   </copy>	
+</target>
+</project>

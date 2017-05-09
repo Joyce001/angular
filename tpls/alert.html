@@ -1,0 +1,33 @@
+<div ng-controller="CityCtrl">
+	<loader howToLoad = "loadData()">加载数据1</loader>
+	<div class="row">
+		<div class="col-md-3">
+			<superman strength>动感超人---力量</superman>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-3">
+			<superman strength speed>动感超人2---力量+敏捷</superman>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-3">
+			<superman strength speed light>动感超人3---力量+敏捷+发光</superman>
+		</div>
+	</div>
+</div>
+<div ng-controller="CityCtrl2">
+	<loader howToLoad="loadData2()">加载数据2</loader>
+	<hello></hello>
+	<div hello></div>
+	<drink flavor="{{ctrlFlavor}}"></drink>
+	ctrl:
+	<input type="text" ng-model="ctrlFlavor" />
+	<br />
+	directive:
+	<drinktwo flavor="ctrlFlavor"></drinktwo>
+</div>
+<div ng-controller="CityCtrl3">
+	<greeting greet="sayHello(name)"></greeting>
+</div>
+
